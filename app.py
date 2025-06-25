@@ -101,7 +101,7 @@ def summarize_chapter(_api_key: str, title: str, content: str) -> str:
     """
     # This key is passed to ensure st.cache_data re-runs if the key changes,
     # but it's used directly in the LLM initialization.
-    llm = ChatGroq(api_key="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", model_name="gemma2-9b-it", temperature=0.2)
+    llm = ChatGroq(api_key="your_groq_api", model_name="gemma2-9b-it", temperature=0.2)
     
     # Split into chunks
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=6000, chunk_overlap=500)
